@@ -179,7 +179,7 @@ export default function App() {
         {/* Main Content Area */}
         <div className="flex-1 flex flex-col h-screen overflow-hidden bg-[#F8FAFC] dark:bg-[#0b1120] transition-colors duration-300">
            {/* Top Header */}
-           <header className="h-16 bg-white dark:bg-[#111827] border-b border-slate-200 dark:border-slate-800 flex justify-between items-center shrink-0 z-30 shadow-sm transition-colors duration-300">
+           <header className="relative h-16 bg-white dark:bg-[#111827] border-b border-slate-200 dark:border-slate-800 flex justify-between items-center shrink-0 z-30 shadow-sm transition-colors duration-300">
               <div className="flex items-center h-full">
                  <button 
                    className="h-full px-5 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800 flex items-center justify-center transition-colors focus:outline-none border-r border-slate-100 dark:border-slate-800"
@@ -187,7 +187,10 @@ export default function App() {
                  >
                    <Menu className="w-6 h-6" />
                  </button>
-                 <h1 className="text-xl font-bold text-slate-800 dark:text-white hidden sm:block ml-5">
+              </div>
+
+              <div className="absolute left-1/2 transform -translate-x-1/2">
+                 <h1 className="text-xl font-bold text-slate-800 dark:text-white hidden sm:block">
                    {getPageTitle()}
                  </h1>
               </div>
