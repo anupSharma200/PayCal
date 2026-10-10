@@ -217,12 +217,12 @@ export default function App() {
             <a className="l" href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
             <a className="l" href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a className="l" href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
+            <a className="btn navy" href="#talk" onClick={() => setMenuOpen(false)}>
+              Talk to an expert
+            </a>
             <button className="menu" id="mb" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>
               ☰
             </button>
-            <a className="btn navy" href="#talk" onClick={() => setMenuOpen(false)} style={{ padding: '9px 16px', fontSize: '14px' }}>
-              Talk to an expert
-            </a>
           </nav>
         </div>
       </header>
