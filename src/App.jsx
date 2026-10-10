@@ -211,16 +211,16 @@ export default function App() {
             <i>P</i>paylane
           </a>
           <nav className={menuOpen ? 'open' : ''}>
-            <a className="l" href="#calc">Calculator</a>
-            <a className="l" href="#tools">Tools</a>
-            <a className="l" href="#services">Services</a>
-            <a className="l" href="#reviews">Reviews</a>
-            <a className="l" href="#about">About</a>
-            <a className="l" href="#faq">FAQ</a>
+            <a className="l" href="#calc" onClick={() => setMenuOpen(false)}>Calculator</a>
+            <a className="l" href="#tools" onClick={() => setMenuOpen(false)}>Tools</a>
+            <a className="l" href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a className="l" href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
+            <a className="l" href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a className="l" href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
             <button className="menu" id="mb" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>
               ☰
             </button>
-            <a className="btn navy" href="#talk" style={{ padding: '9px 16px', fontSize: '14px' }}>
+            <a className="btn navy" href="#talk" onClick={() => setMenuOpen(false)} style={{ padding: '9px 16px', fontSize: '14px' }}>
               Talk to an expert
             </a>
           </nav>
