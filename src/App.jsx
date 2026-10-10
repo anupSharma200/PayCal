@@ -115,9 +115,16 @@ export default function App() {
 
   return (
      <div className="flex h-screen bg-[#F8FAFC] dark:bg-[#0b1120] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300 font-sans">
-        
+        {/* Mobile Sidebar Overlay */}
+        {sidebarOpen && (
+          <div 
+            className="fixed inset-0 bg-slate-900/60 z-40 backdrop-blur-sm transition-opacity md:hidden" 
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
         {/* Sidebar - Dynamically themes based on light/dark mode */}
-        <aside className={`flex-shrink-0 z-20 w-72 bg-white dark:bg-[#111827] text-slate-800 dark:text-slate-300 transition-all duration-300 ease-in-out flex flex-col border-r border-slate-200 dark:border-slate-800 shadow-2xl ${sidebarOpen ? 'ml-0' : '-ml-72'}`}>
+        <aside className={`fixed inset-y-0 left-0 z-50 w-72 bg-white dark:bg-[#111827] text-slate-800 dark:text-slate-300 transition-all duration-300 ease-in-out flex flex-col border-r border-slate-200 dark:border-slate-800 shadow-2xl ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 md:flex-shrink-0 ${sidebarOpen ? 'md:ml-0' : 'md:-ml-72'}`}>
            {/* Logo Area */}
            <div className="h-16 flex items-center px-6 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#0f172a] transition-colors duration-300">
              <div className="w-8 h-8 bg-blue-600 text-white rounded-lg font-bold flex items-center justify-center shadow-sm text-sm mr-3">Pc</div>
@@ -211,8 +218,8 @@ export default function App() {
               
               {currentPage === 'calculator' && (
                 <div className="max-w-6xl mx-auto">
-                   <div className="mb-8 md:mb-10">
-                     <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2 transition-colors">PayCal Salary Calculator <span className="text-blue-500">✨</span></h2>
+                   <div className="mb-4 md:mb-5">
+                     <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white  transition-colors">PayCal Salary Calculator <span className="text-blue-500">✨</span></h2>
                      <p className="text-slate-500 dark:text-slate-400 text-lg font-medium transition-colors">Estimate your true take-home pay with precision</p>
                    </div>
                    <div className="bg-white dark:bg-[#1e293b] rounded-3xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col xl:flex-row transition-colors duration-300">
