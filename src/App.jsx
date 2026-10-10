@@ -114,7 +114,7 @@ export default function App() {
   };
 
   return (
-     <div className="flex h-screen bg-[#F8FAFC] dark:bg-[#0b1120] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300">
+     <div className="flex h-screen bg-[#F8FAFC] dark:bg-[#0b1120] text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300 font-sans">
         
         {/* Sidebar - Dynamically themes based on light/dark mode */}
         <aside className={`flex-shrink-0 z-20 w-72 bg-white dark:bg-[#111827] text-slate-800 dark:text-slate-300 transition-all duration-300 ease-in-out flex flex-col border-r border-slate-200 dark:border-slate-800 shadow-2xl ${sidebarOpen ? 'ml-0' : '-ml-72'}`}>
@@ -190,7 +190,7 @@ export default function App() {
               </div>
 
               <div className="absolute left-1/2 transform -translate-x-1/2">
-                 <h1 className="text-xl font-bold text-slate-800 dark:text-white hidden sm:block">
+                 <h1 className="text-xl font-bold font-sans text-slate-800 dark:text-white hidden sm:block">
                    {getPageTitle()}
                  </h1>
               </div>
